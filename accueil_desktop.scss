@@ -52,18 +52,24 @@ body
     width: 50%
 }    
 
+
+
 .header__localisation
 {
     background-color: #eaeaea;
     display: flex;
+    align-content: center;
     justify-content: center;
-    @include heading-style(0.8rem,normal,black);
+    font-size: 0.8rem;
+    font-family: 'Roboto';
     border-top: solid 1px grey;
     box-shadow: 0px 0px 3px 0px;
 }
 
-.icon_localisation
+.header__localisation-img
 {
+    width: 03%;
+    height: 03%;
     align-self: center;
     padding-right: 10px;
 }
@@ -307,105 +313,7 @@ footer
     text-decoration: none;
 }
 
-@media screen and (min-width: 1024px)
 
-{
-
-    body
-    {
-        margin:auto;
-    }
-
-.header__localisation
-{
-    @include heading-style(1rem, normal, black);
-}
-
-.header__heading
-{
-    padding-top: 5%;
-    padding-bottom: 5%;
-    
-&--primary
-{
-    @include heading-style(1.2rem, bold,black);
-}
-&--secondary
-    {
-    @include heading-style(1rem, normal,black);
-}
-}
-
-.header__button
-{
-    width: 50%;
-    @include heading-style(1rem,bold,white);
-    cursor:pointer;
-}
-
-.operation
-{
-    padding-bottom: 5%;
-&__blocks
-{
-display: flex;
-width: 80%;
-}
-}
-
-.operation h2
-{
-    padding-top:5%;
-}
-
-.operation__block
-{
-    width: 50%;
-    margin-right: 5%;
-    margin-top: 0%;
-}
-
-.restaurants h2
-{
-    padding-top:5%;
-    padding-bottom: 5%;
-}
-
-.block__restaurants
-{
-    display: flex;
-    flex-wrap: wrap;
-    width: 90%;
-    justify-content: center;
-
-}
-
-.block_restaurant
-{
-    width: 30%;
-    margin-right: 5%;
-    margin-bottom: 5%;
-    height: 230px;
-}
-
-.block_restaurant__text
-{
-    @include heading-style(1rem,normal, black);
-    padding-top: 10px;
-    &--bold
-    {
-        font-size: bold;
-    }
-}
-
-.heading
-{
-    @include heading-style(1rem,bold, black);
-    padding-bottom:20px;
-    padding-top: 4%;
-}
-
-}
 
 
   

@@ -33,16 +33,17 @@ body {
 .header__localisation {
   background-color: #eaeaea;
   display: flex;
+  align-content: center;
   justify-content: center;
-  font-family: "Roboto";
   font-size: 0.8rem;
-  font-weight: normal;
-  color: black;
+  font-family: "Roboto";
   border-top: solid 1px grey;
   box-shadow: 0px 0px 3px 0px;
 }
 
-.icon_localisation {
+.header__localisation-img {
+  width: 3%;
+  height: 3%;
   align-self: center;
   padding-right: 10px;
 }
@@ -222,8 +223,6 @@ body {
   color: blue;
   background: -webkit-linear-gradient(#FF79DA, #9356DC);
   background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
 .icon__heart--filled:hover {
@@ -272,102 +271,6 @@ footer {
   font-weight: normal;
   color: white;
   text-decoration: none;
-}
-
-@media screen and (min-width: 1024px) {
-  body {
-    margin: auto;
-  }
-
-  .header__localisation {
-    font-family: "Roboto";
-    font-size: 1rem;
-    font-weight: normal;
-    color: black;
-  }
-
-  .header__heading {
-    padding-top: 5%;
-    padding-bottom: 5%;
-  }
-  .header__heading--primary {
-    font-family: "Roboto";
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: black;
-  }
-  .header__heading--secondary {
-    font-family: "Roboto";
-    font-size: 1rem;
-    font-weight: normal;
-    color: black;
-  }
-
-  .header__button {
-    width: 50%;
-    font-family: "Roboto";
-    font-size: 1rem;
-    font-weight: bold;
-    color: white;
-    cursor: pointer;
-  }
-
-  .operation {
-    padding-bottom: 5%;
-  }
-  .operation__blocks {
-    display: flex;
-    width: 80%;
-  }
-
-  .operation h2 {
-    padding-top: 5%;
-  }
-
-  .operation__block {
-    width: 50%;
-    margin-right: 5%;
-    margin-top: 0%;
-  }
-
-  .restaurants h2 {
-    padding-top: 5%;
-    padding-bottom: 5%;
-  }
-
-  .block__restaurants {
-    display: flex;
-    flex-wrap: wrap;
-    width: 90%;
-    justify-content: center;
-  }
-
-  .block_restaurant {
-    width: 30%;
-    margin-right: 5%;
-    margin-bottom: 5%;
-    height: 230px;
-  }
-
-  .block_restaurant__text {
-    font-family: "Roboto";
-    font-size: 1rem;
-    font-weight: normal;
-    color: black;
-    padding-top: 10px;
-  }
-  .block_restaurant__text--bold {
-    font-size: bold;
-  }
-
-  .heading {
-    font-family: "Roboto";
-    font-size: 1rem;
-    font-weight: bold;
-    color: black;
-    padding-bottom: 20px;
-    padding-top: 4%;
-  }
 }
 
 /*# sourceMappingURL=accueil.css.map */

@@ -14,12 +14,12 @@
                             <img class="header__top-img" src="images/logo/ohmyfood@2x.svg" alt="logo ohmyfood">
                         </div>   
                         <div class="header__localisation">
-                            <img class="header__localisation-img" src="images/map-marker-alt-solid.svg" alt="icon position">
+                            <i class="fas fa-map-marker-alt icon_localisation"></i>
                             <p>Paris, Belleville</p>
                         </div>
 
                         <div class="header__heading">
-                            <h1 class="header__heading--primary"> Composez votre menu et reservez-le !</h1>
+                            <h1 class="header__heading--primary"> Composez et réservez votre menu !</h1>
                             <h2 class="header__heading--secondary"> Découvrez des restaurants d'exeception, séléctionnés par nos soins.</h2>
                             <input type="button" class="header__button" value="Explorez les restaurants">
                         </div>
@@ -27,80 +27,96 @@
 
                 <section class="operation">
                     <h2 class="heading">Fonctionnement</h2>
-                    <div class="operation__block"> 
-                        <div class="operation-block__number">1</div>
-                        <div class="operation-block__text">
-                            <i class="fas fa-mobile-alt icon"></i>
-                            <p>Choisissez un restaurant</p>
+                    <div class="operation__blocks">
+                        <div class="operation__block"> 
+                            <div class="operation-block__number">1</div>
+                            <div class="operation-block__text">
+                                <i class="fas fa-mobile-alt icon"></i>
+                                <p>Choisissez un restaurant</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="operation__block"> 
-                        <div class="operation-block__number">2</div>
-                        <div class="operation-block__text">
-                            <i class="fas fa-list-ul icon"></i>
-                            <p>Composez votre menu</p>
+                        <div class="operation__block"> 
+                            <div class="operation-block__number">2</div>
+                            <div class="operation-block__text">
+                                <i class="fas fa-list-ul icon"></i>
+                                <p>Composez votre menu</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="operation__block operation__block--pink"> 
-                        <span class="operation-block__number">3</span>
-                        <div class="operation-block__text">
-                            <i class="fas fa-store icon icon--pink"></i>
-                            <p>Dégustez au restaurant</p>
+                        <div class="operation__block operation__block--pink"> 
+                            <div class="operation-block__number">3</div>
+                            <div class="operation-block__text">
+                                <i class="fas fa-store icon icon--pink"></i>
+                                <p>Dégustez au restaurant</p>
+                            </div>
                         </div>
-                    </div>
+                    </div>    
                 </section>
                 <section class="restaurants">
                     <h3 class="heading">Restaurants</h3>
-                    <a class="block_restaurant" href="">
-                        <div class="block_restaurant__heading">
-                            <div class="block_restaurant__heading--new">Nouveauté</div>
-                            <img src="images/restaurants/Restaurant_bistro.jpg" alt="bistro">
-                        </div>
-                        <div class="block_restaurant__description">
-                            <div class="block_restaurant__text">
-                            <p class="block_restaurant__text--bold">Au comptoire traditionnel</p>
-                            <p>Sentier</p>
+                    <div class="block__restaurants">
+                        <a class="block_restaurant" href="">
+                            <div class="block_restaurant__heading">
+                                <div class="block_restaurant__heading--new">Nouveauté</div>
+                                <img src="images/restaurants/Restaurant_bistro.jpg" alt="bistro">
                             </div>
-                            <i class="far fa-heart icon__heart icon__heart--filled"></i>
-                        </div>
-                    </a>
-                    <a class="block_restaurant" href="">
-                        <div class="block_restaurant__heading">
-                            <div class="block_restaurant__heading block_restaurant__heading--new">Nouveauté</div>
-                            <img src="images/restaurants/Restaurant_asiat.jpg" alt="Restaurant asiatique">
-                        </div>
-                        <div class="block_restaurant__description">
-                            <div class="block_restaurant__text">
-                            <p class="block_restaurant__text--bold">La table du Dragon</p>
-                            <p>Place d'Italie</p>
+                            <div class="block_restaurant__description">
+                                <div class="block_restaurant__text">
+                                <p class="block_restaurant__text--bold">Au comptoire traditionnel</p>
+                                <p>Sentier</p>
+                                </div>
+                                <div class="icon__favoris">
+                                    <i class="far fa-heart icon__heart"></i>
+                                    <i class="fas fa-heart icon__heart--filled"></i>
+                                </div>
+                            </div>    
+                        </a>
+                        <a class="block_restaurant" href="">
+                            <div class="block_restaurant__heading">
+                                <div class="block_restaurant__heading block_restaurant__heading--new">Nouveauté</div>
+                                <img src="images/restaurants/Restaurant_asiat.jpg" alt="Restaurant asiatique">
                             </div>
-                            <i class="far fa-heart icon__heart"></i>
-                        </div>
-                    </a>
-                    <a class="block_restaurant" href="">
-                        <div class="block_restaurant__heading">
-                            <img src="images/restaurants/Restaurant_vege.jpg" alt="Restaurant vege">
-                        </div>
-                        <div class="block_restaurant__description">
-                            <div class="block_restaurant__text">
-                            <p class="block_restaurant__text--bold">La Pause Végé</p>
-                            <p>Nation</p>
+                            <div class="block_restaurant__description">
+                                <div class="block_restaurant__text">
+                                <p class="block_restaurant__text--bold">La table du Dragon</p>
+                                <p>Place d'Italie</p>
+                                </div>
+                                <div class="icon__favoris">
+                                    <i class="far fa-heart icon__heart"></i>
+                                    <i class="fas fa-heart icon__heart--filled"></i>
+                                </div>
                             </div>
-                            <i class="far fa-heart icon__heart"></i>
-                        </div>
-                    </a>
-                    <a class="block_restaurant" href="">
-                        <div class="block_restaurant__heading">
-                            <img src="images/restaurants/Restaurant_fr.jpg" alt="Restaurant vege">
-                        </div>
-                        <div class="block_restaurant__description">
-                            <div class="block_restaurant__text">
-                            <p class="block_restaurant__text--bold">Le Théatre Culinaire</p>
-                            <p>Odéon</p>
+                        </a>
+                        <a class="block_restaurant" href="">
+                            <div class="block_restaurant__heading">
+                                <img src="images/restaurants/Restaurant_vege.jpg" alt="Restaurant vege">
                             </div>
-                            <i class="far fa-heart icon__heart"></i>
-                        </div>
-                    </a>        
+                            <div class="block_restaurant__description">
+                                <div class="block_restaurant__text">
+                                <p class="block_restaurant__text--bold">La Pause Végé</p>
+                                <p>Nation</p>
+                                </div>
+                                <div class="icon__favoris">
+                                    <i class="far fa-heart icon__heart"></i>
+                                    <i class="fas fa-heart icon__heart--filled"></i>
+                                </div>
+                            </div>
+                        </a>
+                        <a class="block_restaurant" href="">
+                            <div class="block_restaurant__heading">
+                                <img src="images/restaurants/Restaurant_fr.jpg" alt="Restaurant vege">
+                            </div>
+                            <div class="block_restaurant__description">
+                                <div class="block_restaurant__text">
+                                <p class="block_restaurant__text--bold">Le Théatre Culinaire</p>
+                                <p>Odéon</p>
+                                </div>
+                                <div class="icon__favoris">
+                                    <i class="far fa-heart icon__heart"></i>
+                                    <i class="fas fa-heart icon__heart--filled"></i>
+                                </div>
+                            </div>
+                        </a>
+                    </div>        
                 </section>
                 <footer>
                     <img class="footer__logo" src="images/logo/ohmyfood@2x.svg" alt="logo_footer">
