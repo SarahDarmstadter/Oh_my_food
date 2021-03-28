@@ -3,14 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel=stylesheet href="accueil.css">
+    <link rel=stylesheet href="CSS/accueil.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <title>Oh My Food- Sarah Darmstadter</title>
 </head>
         <body>
                 <header class="header">
                         <div class="header__top">
-                            <i class="fas fa-arrow-left icon__arrow"></i>
                             <img class="header__top-img" src="images/logo/ohmyfood@2x.svg" alt="logo ohmyfood">
                         </div>   
                         <div class="header__localisation">
@@ -21,7 +20,7 @@
                         <div class="header__heading">
                             <h1 class="header__heading--primary"> Composez et réservez votre menu !</h1>
                             <h2 class="header__heading--secondary"> Découvrez des restaurants d'exeception, séléctionnés par nos soins.</h2>
-                            <input type="button" class="header__button" value="Explorez les restaurants">
+                            <input type="button" class="__button" value="Explorez les restaurants">
                         </div>
                 </header>
 
@@ -54,7 +53,7 @@
                 <section class="restaurants">
                     <h3 class="heading">Restaurants</h3>
                     <div class="block__restaurants">
-                        <a class="block_restaurant" href="">
+                        <a class="block_restaurant" href="Page_bistro.html">
                             <div class="block_restaurant__heading">
                                 <div class="block_restaurant__heading--new">Nouveauté</div>
                                 <img src="images/restaurants/Restaurant_bistro.jpg" alt="bistro">
@@ -96,8 +95,8 @@
                                 <p>Nation</p>
                                 </div>
                                 <div class="icon__favoris">
-                                    <i class="far fa-heart icon__heart"></i>
-                                    <i class="fas fa-heart icon__heart--filled"></i>
+                                        <i class="fas fa-heart icon__heart--filled"></i>
+                                        <i class="far fa-heart icon__heart"></i>
                                 </div>
                             </div>
                         </a>
@@ -124,29 +123,30 @@
                     <a class="footer__link" href=""><i class="fas fa-hands-helping footer__icon"></i> Devenir partenaire</a>
                     <a class="footer__link" href="">Mention légales</a>
                     <div class="footer__contact">
-                        <a class="footer__contact" href="">Contact</a>
-                    <form action="Contact" method="post">
+                        <a class="footer__contact" href="#formulaire_contact">Contact</a>
+                    <form action="Contact" method="post" id="formulaire_contact">
                         <ul>
-                            <li>
-                                <label for="name">Name:</label>
+                            <li class="name">
+                                <label for="name">Nom :</label>
                                 <input type="text" id="name" name="user_name" />
                             </li>
-                            <li>
-                                <label for="mail">E-mail:</label>
+                            <li class="mail">
+                                <label for="mail">E-mail :</label>
                                 <input type="email" id="mail" name="user_mail" />
                             </li>
-                            <li>
-                                <label for="msg">Message:</label>
+                            <li class="msg">
+                                <label for="msg">Message :</label>
                                 <textarea id="msg" name="user_message"></textarea>
                             </li>
                             <li class="button">
-                                <button type="submit">Send your message</button>
+                                <button type="submit" class="button">Envoyer</button>
                             </li>
                         </ul>
                     </form>
                     </div>
                 </footer>
-            </body>        
+            </body>  
+</html>      
                     
 
 

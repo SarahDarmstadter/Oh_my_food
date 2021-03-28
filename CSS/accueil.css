@@ -1,10 +1,10 @@
 @font-face {
   font-family: "Shrikhand";
-  src: url("polices/Shrikhand/Shrikhand-Regular.ttf") format("truetype");
+  src: url("../polices/Shrikhand/Shrikhand-Regular.ttf") format("truetype");
 }
 @font-face {
   font-family: "Roboto";
-  src: url("polices/Roboto/Roboto-Regular.ttf") format("truetype");
+  src: url("../polices/Roboto/Roboto-Regular.ttf") format("truetype");
 }
 body {
   margin: 0px;
@@ -68,7 +68,7 @@ body {
   color: black;
 }
 
-.header__button {
+.__button {
   border-radius: 30px;
   height: 40px;
   width: 80%;
@@ -96,6 +96,13 @@ body {
   flex-direction: column;
   align-items: center;
   padding-bottom: 10%;
+}
+
+.operation__blocks {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .operation__block {
@@ -158,7 +165,14 @@ body {
   padding-bottom: 10%;
 }
 
+.block__restaurants {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .block_restaurant {
+  display: block;
   width: 80%;
   height: 200px;
   border-radius: 15px;
@@ -219,23 +233,32 @@ body {
   position: absolute;
   z-index: 2;
   opacity: 0;
-  color: blue;
+  color: #FF79DA;
   background: -webkit-linear-gradient(#FF79DA, #9356DC);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-}
-
-.icon__heart--filled:hover {
-  opacity: 1;
-  transition: all 0.5s;
+  transition: all 0s;
   content: "";
 }
 
-.icon__heart--filled:hover ~ .icon__heart {
+.icon__favoris:hover .icon__heart--filled {
+  opacity: 1;
+  transition: all 1s;
+}
+.icon__favoris:hover .icon__heart {
   opacity: 0;
+  transition: all 0.5s;
 }
 
+.icon__favoris {
+  width: 10%;
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+}
+
+/*MISE EN PAGE DU FOOTER*/
 footer {
   display: flex;
   flex-direction: column;
@@ -272,102 +295,73 @@ footer {
   font-weight: normal;
   color: white;
   text-decoration: none;
+  margin-bottom: 5%;
 }
 
-@media screen and (min-width: 1024px) {
-  body {
-    margin: auto;
-  }
+/*mise en page du formulaire de contact*/
+.formulaire_contact {
+  line-height: 2rem;
+}
 
-  .header__localisation {
-    font-family: "Roboto";
-    font-size: 1rem;
-    font-weight: normal;
-    color: black;
-  }
+form ul {
+  padding-left: 0px;
+}
+form ul li {
+  list-style: none;
+  align-items: center;
+  display: flex;
+  margin-bottom: 5px;
+  border: pink solid;
+}
 
-  .header__heading {
-    padding-top: 5%;
-    padding-bottom: 5%;
-  }
-  .header__heading--primary {
-    font-family: "Roboto";
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: black;
-  }
-  .header__heading--secondary {
-    font-family: "Roboto";
-    font-size: 1rem;
-    font-weight: normal;
-    color: black;
-  }
+label {
+  padding-right: 4px;
+}
 
-  .header__button {
-    width: 50%;
-    font-family: "Roboto";
-    font-size: 1rem;
-    font-weight: bold;
-    color: white;
-    cursor: pointer;
-  }
+.footer__contact:active .name {
+  transform: translateX(10000px);
+}
 
-  .operation {
-    padding-bottom: 5%;
-  }
-  .operation__blocks {
-    display: flex;
-    width: 80%;
-  }
+.footer__contact:hover .msg {
+  transform: translateX(10000px);
+}
 
-  .operation h2 {
-    padding-top: 5%;
-  }
+.name {
+  height: 20px;
+  background: #efe9e9;
+  border: none;
+  position: absolute;
+  left: -9999px;
+  transition-duration: 1s;
+  content: "";
+  border: solid pink;
+}
 
-  .operation__block {
-    width: 50%;
-    margin-right: 5%;
-    margin-top: 0%;
-  }
+.mail {
+  border: none;
+  position: absolute;
+  left: -9999px;
+  transition-duration: 1s;
+  content: "";
+}
 
-  .restaurants h2 {
-    padding-top: 5%;
-    padding-bottom: 5%;
-  }
+.msg {
+  background: #efe9e9;
+  border: none;
+  position: absolute;
+  left: -9999px;
+  transition-duration: 1s;
+  content: "";
+}
 
-  .block__restaurants {
-    display: flex;
-    flex-wrap: wrap;
-    width: 90%;
-    justify-content: center;
-  }
-
-  .block_restaurant {
-    width: 30%;
-    margin-right: 5%;
-    margin-bottom: 5%;
-    height: 230px;
-  }
-
-  .block_restaurant__text {
-    font-family: "Roboto";
-    font-size: 1rem;
-    font-weight: normal;
-    color: black;
-    padding-top: 10px;
-  }
-  .block_restaurant__text--bold {
-    font-size: bold;
-  }
-
-  .heading {
-    font-family: "Roboto";
-    font-size: 1rem;
-    font-weight: bold;
-    color: black;
-    padding-bottom: 20px;
-    padding-top: 4%;
-  }
+.button {
+  border-radius: 5px;
+  border: none;
+  margin-top: 5px;
+  position: absolute;
+  left: -9999px;
+  transition-duration: 1s;
+  content: "";
 }
 
 /*# sourceMappingURL=accueil.css.map */

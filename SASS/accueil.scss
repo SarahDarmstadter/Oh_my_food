@@ -2,8 +2,6 @@ $color-primary: #9356DC;
 $color-secondary: #FF79DA;
 $color-tertiary: #99E2D0;
 
-
-
 @mixin heading-style($size, $weight,$color)
 {
     font-family: "Roboto";
@@ -15,12 +13,12 @@ $color-tertiary: #99E2D0;
 
 @font-face {
     font-family: 'Shrikhand';
-    src: url('polices/Shrikhand/Shrikhand-Regular.ttf') format('truetype');
+    src: url('../polices/Shrikhand/Shrikhand-Regular.ttf') format('truetype');
 }
 
 @font-face{
     font-family: 'Roboto';
-    src: url('polices/Roboto/Roboto-Regular.ttf')format('truetype');
+    src: url('../polices/Roboto/Roboto-Regular.ttf')format('truetype');
 }
 
 body 
@@ -86,7 +84,7 @@ body
 }
 }
 
-.header__button
+.__button
 {
     border-radius: 30px;
     height: 40px;
@@ -116,6 +114,14 @@ body
     flex-direction: column;
     align-items: center;
     padding-bottom: 10%;
+}
+
+.operation__blocks
+{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .operation__block
@@ -179,8 +185,17 @@ body
     padding-bottom: 10%;
 }
 
+.block__restaurants
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
 .block_restaurant
 {
+    display: block;
     width: 80%;
     height: 200px;
     border-radius: 15px;
@@ -242,31 +257,42 @@ body
   position:absolute;
   z-index: 2;
   opacity: 0;
-  color: blue;
+  color: $color-secondary;
   background: -webkit-linear-gradient($color-secondary, $color-primary);
   background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    transition: all 0s;
+    content:"";  
 }
 
+.icon__favoris:hover
+{
 
-.icon__heart--filled:hover
+    .icon__heart--filled
 
     {
         opacity: 1;
-        transition: all 0.5s;
-        content:"";
+        transition: all 1s;
     }
-  
 
-    .icon__heart--filled:hover ~ .icon__heart
+    .icon__heart
     {
-        opacity: 0;
+        opacity:0;
+        transition: all 0.5s;
     }
 
+}
 
-
-
+.icon__favoris
+{
+    width: 10%;
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+}
+  
+/*MISE EN PAGE DU FOOTER*/
 
 
 footer 
@@ -305,114 +331,86 @@ footer
 {
     @include heading-style(0.8rem, normal,white);
     text-decoration: none;
-}
-
-@media screen and (min-width: 1024px)
-
-{
-
-    body
-    {
-        margin:auto;
-    }
-
-.header__localisation
-{
-    @include heading-style(1rem, normal, black);
-}
-
-.header__heading
-{
-    padding-top: 5%;
-    padding-bottom: 5%;
-    
-&--primary
-{
-    @include heading-style(1.2rem, bold,black);
-}
-&--secondary
-    {
-    @include heading-style(1rem, normal,black);
-}
-}
-
-.header__button
-{
-    width: 50%;
-    @include heading-style(1rem,bold,white);
-    cursor:pointer;
-}
-
-.operation
-{
-    padding-bottom: 5%;
-&__blocks
-{
-display: flex;
-width: 80%;
-}
-}
-
-.operation h2
-{
-    padding-top:5%;
-}
-
-.operation__block
-{
-    width: 50%;
-    margin-right: 5%;
-    margin-top: 0%;
-}
-
-.restaurants h2
-{
-    padding-top:5%;
-    padding-bottom: 5%;
-}
-
-.block__restaurants
-{
-    display: flex;
-    flex-wrap: wrap;
-    width: 90%;
-    justify-content: center;
-
-}
-
-.block_restaurant
-{
-    width: 30%;
-    margin-right: 5%;
     margin-bottom: 5%;
-    height: 230px;
 }
 
-.block_restaurant__text
+/*mise en page du formulaire de contact*/
+
+.formulaire_contact
 {
-    @include heading-style(1rem,normal, black);
-    padding-top: 10px;
-    &--bold
+    line-height: 2rem;
+}
+
+form ul
+{
+    padding-left: 0px;
+
+    li
     {
-        font-size: bold;
+        list-style: none;
+        align-items: center;       
+        display: flex;
+        margin-bottom: 5px;
+        border: pink solid;
     }
-}
+} 
 
-.heading
+label
 {
-    @include heading-style(1rem,bold, black);
-    padding-bottom:20px;
-    padding-top: 4%;
+    padding-right: 4px;
 }
 
+.footer__contact:active  .name 
+{
+    transform:translateX(10000px);
+}
+
+.footer__contact:hover  .msg 
+{
+    transform:translateX(10000px);
 }
 
 
-  
+.name
+{
+    height: 20px;
+    background: #efe9e9;
+    border: none;
+    position: absolute;
+    left: -9999px;
+    transition-duration: 1s;
+    content:"";
+    border: solid pink;
+}
+
+.mail
+{
+    border:none;
+    position: absolute;
+    left: -9999px;
+    transition-duration: 1s;
+    content:"";
+}
+
+.msg
+{
+    background: #efe9e9;
+    border:none;
+    position: absolute;
+    left: -9999px;
+    transition-duration: 1s;
+    content:"";
+}
+
+.button
+{
+    border-radius: 5px;
+    border: none; 
+    margin-top: 5px;
+    position: absolute;
+    left: -9999px;
+    transition-duration: 1s;
+    content:"";
+}
 
 
-
-
-
-
-      
