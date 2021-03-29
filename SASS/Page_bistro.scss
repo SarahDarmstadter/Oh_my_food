@@ -81,13 +81,17 @@ footer
     background: white;
     border-radius: 10px 10px 10px 10px;
     width: 90%;
+    height: 50px;
     margin-bottom: 10px;
     box-shadow:  0px 4px 9px -2px #c1bdbd;
-    line-height: 0rem;
     padding-left: 10px;
     position: relative;
     bottom: 10px;
-&--nom
+  display: flex;
+  line-height: 0rem;
+  cursor:pointer;
+  
+    &--nom
 {
     @include heading-style(0.9rem, bold, black);
 }
@@ -97,6 +101,44 @@ footer
     display: flex;
     justify-content: space-between;
 }
+}
+ 
+.block__menu--texte 
+{
+    width: 100%;
+}
+
+
+.icon__check
+{
+  color:white;
+}
+
+.contents
+{ height:50px;
+  justify-content: center;
+  align-items: center;
+  background: $color-tertiary;
+  display:flex;
+  width:0%;
+  overflow:hidden;
+  border-radius: 0px 10px 10px 0px;
+  transition: all 1s;
+}
+
+.block__menu:hover .contents
+{
+  -webkit-transition: width 1s ease-in;
+    -moz-transition: width 1s ease-in;
+    -o-transition: width 1s ease-in;
+    transition: width 1s ease-in;
+    width:10%;
+}
+
+.block__menu:hover .icon__check
+{
+  transform: rotate(360deg);
+  transition: 1s ease-in-out;
 }
 
 .block__menu--1
@@ -177,12 +219,9 @@ footer
 .__button
 {
     width: 140px;
-}
-
-footer
-{
-    height: 100%;
+    cursor:pointer;
 }
 
 @import 'page_bistro_desktop';
+
 

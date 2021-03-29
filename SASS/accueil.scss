@@ -295,7 +295,7 @@ body
 /*MISE EN PAGE DU FOOTER*/
 
 
-footer 
+footer
 {
     display: flex;
     flex-direction: column;
@@ -303,6 +303,7 @@ footer
     line-height: 1.3rem;
     padding-left: 10%;
 }
+
 
 .footer__logo
 {
@@ -365,12 +366,6 @@ label
     transform:translateX(10000px);
 }
 
-.footer__contact:hover  .msg 
-{
-    transform:translateX(10000px);
-}
-
-
 .name
 {
     height: 20px;
@@ -380,7 +375,6 @@ label
     left: -9999px;
     transition-duration: 1s;
     content:"";
-    border: solid pink;
 }
 
 .mail
@@ -388,7 +382,7 @@ label
     border:none;
     position: absolute;
     left: -9999px;
-    transition-duration: 1s;
+    transition-duration: 2s;
     content:"";
 }
 
@@ -398,8 +392,6 @@ label
     border:none;
     position: absolute;
     left: -9999px;
-    transition-duration: 1s;
-    content:"";
 }
 
 .button
@@ -409,8 +401,6 @@ label
     margin-top: 5px;
     position: absolute;
     left: -9999px;
-    transition-duration: 1s;
-    content:"";
 }
 
-
+@import 'accueil_desktop';

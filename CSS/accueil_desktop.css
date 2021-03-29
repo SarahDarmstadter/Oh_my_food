@@ -111,5 +111,12 @@
     padding-top: 4%;
   }
 }
+.footer__logo {
+  width: 20%;
+}
+
+.footer__link .footer__icon--fork {
+  padding-right: 2.8%;
+}
 
 /*# sourceMappingURL=accueil_desktop.css.map */

@@ -322,10 +322,6 @@ label {
   transform: translateX(10000px);
 }
 
-.footer__contact:hover .msg {
-  transform: translateX(10000px);
-}
-
 .name {
   height: 20px;
   background: #efe9e9;
@@ -334,14 +330,13 @@ label {
   left: -9999px;
   transition-duration: 1s;
   content: "";
-  border: solid pink;
 }
 
 .mail {
   border: none;
   position: absolute;
   left: -9999px;
-  transition-duration: 1s;
+  transition-duration: 2s;
   content: "";
 }
 
@@ -350,8 +345,6 @@ label {
   border: none;
   position: absolute;
   left: -9999px;
-  transition-duration: 1s;
-  content: "";
 }
 
 .button {
@@ -360,8 +353,127 @@ label {
   margin-top: 5px;
   position: absolute;
   left: -9999px;
-  transition-duration: 1s;
-  content: "";
+}
+
+@font-face {
+  font-family: "Shrikhand";
+  src: url("../polices/Shrikhand/Shrikhand-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../polices/Roboto/Roboto-Regular.ttf") format("truetype");
+}
+@media screen and (min-width: 1024px) {
+  body {
+    margin: auto;
+  }
+
+  .header__localisation {
+    font-family: "Roboto";
+    font-size: 1rem;
+    font-weight: normal;
+    color: black;
+  }
+
+  .header__heading {
+    padding-top: 5%;
+    padding-bottom: 5%;
+  }
+  .header__heading--primary {
+    font-family: "Roboto";
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: black;
+  }
+  .header__heading--secondary {
+    font-family: "Roboto";
+    font-size: 1rem;
+    font-weight: normal;
+    color: black;
+  }
+
+  .header__button {
+    width: 30%;
+    font-family: "Roboto";
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+  }
+
+  .operation {
+    padding-bottom: 5%;
+  }
+  .operation__blocks {
+    display: flex;
+    width: 80%;
+  }
+
+  .operation h2 {
+    padding-top: 5%;
+  }
+
+  .operation__blocks {
+    flex-direction: row;
+    width: 80%;
+  }
+
+  .operation__block {
+    width: 30%;
+    margin-right: 5%;
+    margin-top: 0%;
+  }
+
+  .restaurants {
+    padding-bottom: 5%;
+  }
+
+  .restaurants h2 {
+    padding-top: 5%;
+    padding-bottom: 5%;
+  }
+
+  .block__restaurants {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 90%;
+    justify-content: center;
+  }
+
+  .block_restaurant {
+    width: 30%;
+    margin-right: 5%;
+    margin-bottom: 5%;
+    height: 230px;
+  }
+
+  .block_restaurant__text {
+    font-family: "Roboto";
+    font-size: 1rem;
+    font-weight: normal;
+    color: black;
+    padding-top: 10px;
+  }
+  .block_restaurant__text--bold {
+    font-size: bold;
+  }
+
+  .heading {
+    font-family: "Roboto";
+    font-size: 1rem;
+    font-weight: bold;
+    color: black;
+    padding-bottom: 20px;
+    padding-top: 4%;
+  }
+}
+.footer__logo {
+  width: 20%;
+}
+
+.footer__link .footer__icon--fork {
+  padding-right: 2.8%;
 }
 
 .header__top .icon__arrow {
@@ -431,12 +543,15 @@ footer {
   background: white;
   border-radius: 10px 10px 10px 10px;
   width: 90%;
+  height: 50px;
   margin-bottom: 10px;
   box-shadow: 0px 4px 9px -2px #c1bdbd;
-  line-height: 0rem;
   padding-left: 10px;
   position: relative;
   bottom: 10px;
+  display: flex;
+  line-height: 0rem;
+  cursor: pointer;
 }
 .block__menu--nom {
   font-family: "Roboto";
@@ -451,6 +566,39 @@ footer {
   color: black;
   display: flex;
   justify-content: space-between;
+}
+
+.block__menu--texte {
+  width: 100%;
+}
+
+.icon__check {
+  color: white;
+}
+
+.contents {
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+  background: #99E2D0;
+  display: flex;
+  width: 0%;
+  overflow: hidden;
+  border-radius: 0px 10px 10px 0px;
+  transition: all 1s;
+}
+
+.block__menu:hover .contents {
+  -webkit-transition: width 1s ease-in;
+  -moz-transition: width 1s ease-in;
+  -o-transition: width 1s ease-in;
+  transition: width 1s ease-in;
+  width: 10%;
+}
+
+.block__menu:hover .icon__check {
+  transform: rotate(360deg);
+  transition: 1s ease-in-out;
 }
 
 .block__menu--1 {
@@ -537,43 +685,42 @@ footer {
 
 .__button {
   width: 140px;
+  cursor: pointer;
 }
 
-footer {
-  height: 100%;
-}
+@media screen and (min-width: 768px) {
+  .header__top .icon__arrow {
+    position: relative;
+    right: 110px;
+  }
 
-.header__top .icon__arrow {
-  position: relative;
-  right: 110px;
-}
+  .header__top-img {
+    width: 40%;
+  }
 
-.header__top-img {
-  width: 40%;
-}
+  .heading {
+    font-size: 1rem;
+    padding-left: 70px;
+  }
 
-.heading {
-  font-size: 1rem;
-  padding-left: 70px;
-}
+  .carte__heading {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    padding-bottom: 10px;
+  }
 
-.carte__heading {
-  display: flex;
-  flex-direction: column;
-  align-self: center;
-  padding-bottom: 10px;
-}
+  .block__menu {
+    width: 40%;
+  }
 
-.block__menu {
-  width: 40%;
-}
+  .footer__link .footer__icon {
+    padding-right: 1%;
+  }
 
-.footer__link .footer__icon {
-  padding-right: 1%;
-}
-
-.footer__link .footer__icon--fork {
-  padding-right: 1.9%;
+  .footer__link .footer__icon--fork {
+    padding-right: 1.9%;
+  }
 }
 
 /*# sourceMappingURL=La_table_du_dragon.css.map */

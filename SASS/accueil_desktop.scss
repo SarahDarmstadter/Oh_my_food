@@ -3,7 +3,6 @@ $color-secondary: #FF79DA;
 $color-tertiary: #99E2D0;
 
 
-
 @mixin heading-style($size, $weight,$color)
 {
     font-family: "Roboto";
@@ -131,23 +130,17 @@ width: 80%;
     padding-bottom:20px;
     padding-top: 4%;
 }
-
-
-
-
-
-
-
-
-
-
-
-
 }
 
+.footer__logo
+{
+    width: 20%;
+}
 
-  
-
+.footer__link .footer__icon--fork
+{
+    padding-right: 2.8%;
+}
 
 
 
