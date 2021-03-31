@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel=stylesheet href="CSS/accueil.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <title>Oh My Food- Sarah Darmstadter</title>
+</head>
+        <body>
+            <div class="overlay">
+                <div class="spinner"></div> 
+            </div>
+                <header class="header">
+                        <div class="header__top">
+                            <img class="header__top-img" src="images/logo/ohmyfood@2x.svg" alt="logo ohmyfood">
+                        </div>   
+                        <div class="header__localisation">
+                            <i class="fas fa-map-marker-alt icon_localisation"></i>
+                            <p>Paris, Belleville</p>
+                        </div>
+
+                        <div class="header__heading">
+                            <h1 class="header__heading--primary"> Composez et réservez votre menu !</h1>
+                            <h2 class="header__heading--secondary"> Découvrez des restaurants d'exeception, séléctionnés par nos soins.</h2>
+                            <input type="button" class="__button" value="Explorez les restaurants">
+                        </div>
+                </header>
+
+                <section class="operation">
+                    <h2 class="heading">Fonctionnement</h2>
+                    <div class="operation__blocks">
+                        <div class="operation__block"> 
+                            <div class="operation-block__number">1</div>
+                            <div class="operation-block__text">
+                                <i class="fas fa-mobile-alt icon"></i>
+                                <p>Choisissez un restaurant</p>
+                            </div>
+                        </div>
+                        <div class="operation__block"> 
+                            <div class="operation-block__number">2</div>
+                            <div class="operation-block__text">
+                                <i class="fas fa-list-ul icon"></i>
+                                <p>Composez votre menu</p>
+                            </div>
+                        </div>
+                        <div class="operation__block operation__block--pink"> 
+                            <div class="operation-block__number">3</div>
+                            <div class="operation-block__text">
+                                <i class="fas fa-store icon icon--pink"></i>
+                                <p>Dégustez au restaurant</p>
+                            </div>
+                        </div>
+                    </div>    
+                </section>
+                <section class="restaurants">
+                    <h3 class="heading">Restaurants</h3>
+                    <div class="block__restaurants">
+                        <a class="block_restaurant" href="Page_bistro.html">
+                            <div class="block_restaurant__heading">
+                                <div class="block_restaurant__heading--new">Nouveauté</div>
+                                <img src="images/restaurants/Restaurant_bistro.jpg" alt="bistro">
+                            </div>
+                            <div class="block_restaurant__description">
+                                <div class="block_restaurant__text">
+                                <p class="block_restaurant__text--bold">Au comptoire traditionnel</p>
+                                <p>Sentier</p>
+                                </div>
+                                <div class="icon__favoris">
+                                    <i class="far fa-heart icon__heart"></i>
+                                    <i class="fas fa-heart icon__heart--filled"></i>
+                                </div>
+                            </div>    
+                        </a>
+                        <a class="block_restaurant" href="">
+                            <div class="block_restaurant__heading">
+                                <div class="block_restaurant__heading block_restaurant__heading--new">Nouveauté</div>
+                                <img src="images/restaurants/Restaurant_asiat.jpg" alt="Restaurant asiatique">
+                            </div>
+                            <div class="block_restaurant__description">
+                                <div class="block_restaurant__text">
+                                <p class="block_restaurant__text--bold">La table du Dragon</p>
+                                <p>Place d'Italie</p>
+                                </div>
+                                <div class="icon__favoris">
+                                    <i class="far fa-heart icon__heart"></i>
+                                    <i class="fas fa-heart icon__heart--filled"></i>
+                                </div>
+                            </div>
+                        </a>
+                        <a class="block_restaurant" href="">
+                            <div class="block_restaurant__heading">
+                                <img src="images/restaurants/Restaurant_vege.jpg" alt="Restaurant vege">
+                            </div>
+                            <div class="block_restaurant__description">
+                                <div class="block_restaurant__text">
+                                <p class="block_restaurant__text--bold">La Pause Végé</p>
+                                <p>Nation</p>
+                                </div>
+                                <div class="icon__favoris">
+                                        <i class="fas fa-heart icon__heart--filled"></i>
+                                        <i class="far fa-heart icon__heart"></i>
+                                </div>
+                            </div>
+                        </a>
+                        <a class="block_restaurant" href="">
+                            <div class="block_restaurant__heading">
+                                <img src="images/restaurants/Restaurant_fr.jpg" alt="Restaurant vege">
+                            </div>
+                            <div class="block_restaurant__description">
+                                <div class="block_restaurant__text">
+                                <p class="block_restaurant__text--bold">Le Théatre Culinaire</p>
+                                <p>Odéon</p>
+                                </div>
+                                <div class="icon__favoris">
+                                    <i class="far fa-heart icon__heart"></i>
+                                    <i class="fas fa-heart icon__heart--filled"></i>
+                                </div>
+                            </div>
+                        </a>
+                    </div>        
+                </section>
+                <footer>
+                    <img class="footer__logo" src="images/logo/ohmyfood@2x.svg" alt="logo_footer">
+                    <a class="footer__link" href=""><i class="fas fa-utensils footer__icon footer__icon--fork"></i>Proposer un restaurant</a>
+                    <a class="footer__link" href=""><i class="fas fa-hands-helping footer__icon"></i> Devenir partenaire</a>
+                    <a class="footer__link" href="">Mention légales</a>
+                    <div class="footer__contact">
+                        <a class="footer__contact" href="#formulaire_contact">Contact</a>
+                    <form action="Contact" method="post" id="formulaire_contact">
+                        <i class="fas fa-times icon__close"></i>
+                        <ul>
+                            <li class="padding">
+                                <input type="text" id="name" name="user_name" placeholder="Nom "/>
+                                <div class="label__bordure"></div>
+
+                            </li>
+                            <li class="padding">
+                                <input type="email" id="mail" name="user_mail" placeholder="Email " />
+                                <div class="label__bordure"></div>
+
+                            </li>
+                            <li>
+                                <textarea id="msg" name="user_message" placeholder="Message "></textarea>
+                                <div class="label__bordure"></div>
+                            </li>
+                            <li>
+                                <button type="submit" class="__button __button--send">Envoyer</button>
+                            </li>
+                        </ul>
+                    </form>
+                    </div>
+                </footer>
+            </body>  
+</html>      
+                    
+
+
+                        

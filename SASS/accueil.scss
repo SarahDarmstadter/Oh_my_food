@@ -1,6 +1,7 @@
 $color-primary: #9356DC;
 $color-secondary: #FF79DA;
 $color-tertiary: #99E2D0;
+$color-footer: #ffffff59;
 
 @mixin heading-style($size, $weight,$color)
 {
@@ -25,6 +26,55 @@ body
 {
     margin: 0px;
 }
+
+.overlay
+{
+  display:flex;
+  position: fixed;
+  width: 100%; 
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 2;
+  justify-content: center;
+  align-items: center;
+  animation: opacity 1s;
+  animation-fill-mode: forwards;
+  animation-delay: 3s;
+
+}
+
+@keyframes opacity
+{
+    0% {opacity:1;}
+    100%{opacity:0;}
+}
+
+.spinner
+{
+  background:transparent;
+  width: 50px;
+  height: 50px;
+  border-right:$color-secondary 10px dotted;
+  border-left: $color-secondary 10px solid;
+  border-top: $color-tertiary 10px solid;
+  border-bottom: $color-primary 10px solid;
+  border-radius: 34px;
+  z-index:3;
+  animation: spin 1s linear infinite;
+  
+}
+
+@keyframes spin
+{
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
 
 .header
 {
@@ -88,13 +138,23 @@ body
 {
     border-radius: 30px;
     height: 40px;
-    width: 80%;
     margin-top: 10px;
     background: linear-gradient(to bottom right,$color-secondary, $color-primary);
     color: white;
     border: none;
     filter: saturate(140%);
     box-shadow:  0px 2px 4px #c1bdbd;
+    padding-left: 5%;
+    padding-right: 5%;
+    &--send
+    {
+        width: 20%;
+        height: 20px;
+        box-shadow: none;
+        font-size:0.6rem;
+        margin-top:10px;
+        cursor:pointer;
+    }
 }
 
 /*MISE EN PAGE DE LA PARTIE FONCTIONNEMENT*/
@@ -166,7 +226,7 @@ body
            display: flex;
     width: 100%;
     align-items: center;
-    padding-left: 10%;
+    padding-left: 3%;
     .icon
 {
     padding-right: 5%;
@@ -264,6 +324,7 @@ body
     -webkit-text-fill-color: transparent;
     transition: all 0s;
     content:"";  
+    
 }
 
 .icon__favoris:hover
@@ -337,70 +398,90 @@ footer
 
 /*mise en page du formulaire de contact*/
 
-.formulaire_contact
+#formulaire_contact
 {
-    line-height: 2rem;
+   display: flex;
+   flex-direction: column;
+   width: 90%;
+   height: 0px;
+   overflow:hidden;
+   transition: all 1s;
 }
 
-form ul
+.footer__contact:active 
 {
-    padding-left: 0px;
-
-    li
-    {
-        list-style: none;
-        align-items: center;       
-        display: flex;
-        margin-bottom: 5px;
-        border: pink solid;
-    }
-} 
-
-label
-{
-    padding-right: 4px;
+    height: 100%;
 }
 
-.footer__contact:active  .name 
+.icon__close
 {
-    transform:translateX(10000px);
+    color:$color-footer;
+    font-size: 0.6rem;
+    align-self: flex-end;
+    transition: all 1s;
 }
 
-.name
+.icon__close:active #formulaire_contact
 {
-    height: 20px;
-    background: #efe9e9;
-    border: none;
-    position: absolute;
-    left: -9999px;
-    transition-duration: 1s;
-    content:"";
+    height: 0px;
+    overflow:hidden;
 }
 
-.mail
+ul 
 {
+    list-style: none;
+    padding-left:0px;
+}
+
+li
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.padding 
+{
+    padding-bottom: 20px;
+}
+
+
+.label__bordure
+{
+    height: 1px;
+    background: $color-footer;
+}
+
+
+input::placeholder
+{
+    color: $color-footer;
+    font-size: 0.8rem;
+    font-style: italic;
+}
+
+input
+{
+    background: transparent;
     border:none;
-    position: absolute;
-    left: -9999px;
-    transition-duration: 2s;
-    content:"";
 }
 
-.msg
+textarea
 {
-    background: #efe9e9;
+    background: transparent;
     border:none;
-    position: absolute;
-    left: -9999px;
 }
 
-.button
+textarea::placeholder
 {
-    border-radius: 5px;
-    border: none; 
-    margin-top: 5px;
-    position: absolute;
-    left: -9999px;
+    color: $color-footer;
+    font-size: 0.8rem;
+    font-family: roboto;
+    font-style: italic;
+    position:relative;
+    top: 15px;    
+    
 }
+
+
 
 @import 'accueil_desktop';

@@ -10,6 +10,53 @@ body {
   margin: 0px;
 }
 
+.overlay {
+  display: flex;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+  justify-content: center;
+  align-items: center;
+  animation: opacity 1s;
+  animation-fill-mode: forwards;
+  animation-delay: 3s;
+}
+
+@keyframes opacity {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.spinner {
+  background: transparent;
+  width: 50px;
+  height: 50px;
+  border-right: #FF79DA 10px dotted;
+  border-left: #FF79DA 10px solid;
+  border-top: #99E2D0 10px solid;
+  border-bottom: #9356DC 10px solid;
+  border-radius: 34px;
+  z-index: 3;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 .header {
   display: flex;
   flex-direction: column;
@@ -71,13 +118,22 @@ body {
 .__button {
   border-radius: 30px;
   height: 40px;
-  width: 80%;
   margin-top: 10px;
   background: linear-gradient(to bottom right, #FF79DA, #9356DC);
   color: white;
   border: none;
   filter: saturate(140%);
   box-shadow: 0px 2px 4px #c1bdbd;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+.__button--send {
+  width: 20%;
+  height: 20px;
+  box-shadow: none;
+  font-size: 0.6rem;
+  margin-top: 10px;
+  cursor: pointer;
 }
 
 /*MISE EN PAGE DE LA PARTIE FONCTIONNEMENT*/
@@ -148,7 +204,7 @@ body {
   display: flex;
   width: 100%;
   align-items: center;
-  padding-left: 10%;
+  padding-left: 3%;
 }
 .operation-block__text .icon {
   padding-right: 5%;
@@ -299,60 +355,73 @@ footer {
 }
 
 /*mise en page du formulaire de contact*/
-.formulaire_contact {
-  line-height: 2rem;
+#formulaire_contact {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  height: 0px;
+  overflow: hidden;
+  transition: all 1s;
 }
 
-form ul {
+.footer__contact:active {
+  height: 100%;
+}
+
+.icon__close {
+  color: #ffffff59;
+  font-size: 0.6rem;
+  align-self: flex-end;
+  transition: all 1s;
+}
+
+.icon__close:active #formulaire_contact {
+  height: 0px;
+  overflow: hidden;
+}
+
+ul {
+  list-style: none;
   padding-left: 0px;
 }
-form ul li {
-  list-style: none;
-  align-items: center;
+
+li {
   display: flex;
-  margin-bottom: 5px;
-  border: pink solid;
+  flex-direction: column;
 }
 
-label {
-  padding-right: 4px;
+.padding {
+  padding-bottom: 20px;
 }
 
-.footer__contact:active .name {
-  transform: translateX(10000px);
+.label__bordure {
+  height: 1px;
+  background: #ffffff59;
 }
 
-.name {
-  height: 20px;
-  background: #efe9e9;
+input::placeholder {
+  color: #ffffff59;
+  font-size: 0.8rem;
+  font-style: italic;
+}
+
+input {
+  background: transparent;
   border: none;
-  position: absolute;
-  left: -9999px;
-  transition-duration: 1s;
-  content: "";
 }
 
-.mail {
+textarea {
+  background: transparent;
   border: none;
-  position: absolute;
-  left: -9999px;
-  transition-duration: 2s;
-  content: "";
 }
 
-.msg {
-  background: #efe9e9;
-  border: none;
-  position: absolute;
-  left: -9999px;
-}
-
-.button {
-  border-radius: 5px;
-  border: none;
-  margin-top: 5px;
-  position: absolute;
-  left: -9999px;
+textarea::placeholder {
+  color: #ffffff59;
+  font-size: 0.8rem;
+  font-family: roboto;
+  font-style: italic;
+  position: relative;
+  top: 15px;
 }
 
 @font-face {
@@ -363,7 +432,7 @@ label {
   font-family: "Roboto";
   src: url("../polices/Roboto/Roboto-Regular.ttf") format("truetype");
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) {
   body {
     margin: auto;
   }
@@ -392,7 +461,7 @@ label {
     color: black;
   }
 
-  .header__button {
+  .__button {
     width: 30%;
     font-family: "Roboto";
     font-size: 1rem;
@@ -422,6 +491,13 @@ label {
     width: 30%;
     margin-right: 5%;
     margin-top: 0%;
+  }
+
+  .operation-block__number {
+    width: 30px;
+    height: 20px;
+    padding-top: 4px;
+    border-radius: 20px;
   }
 
   .restaurants {
@@ -469,7 +545,12 @@ label {
   }
 }
 .footer__logo {
-  width: 20%;
+  width: 30%;
+}
+
+.footer__links {
+  display: flex;
+  flex-direction: column;
 }
 
 .footer__link .footer__icon--fork {

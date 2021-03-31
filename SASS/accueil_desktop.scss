@@ -22,7 +22,7 @@ $color-tertiary: #99E2D0;
     src: url('../polices/Roboto/Roboto-Regular.ttf')format('truetype');
 }
 
-@media screen and (min-width: 1024px)
+@media screen and (min-width: 768px)
 
 {
 
@@ -51,7 +51,7 @@ $color-tertiary: #99E2D0;
 }
 }
 
-.header__button
+.__button
 {
     width: 30%;
     @include heading-style(1rem,bold,white);
@@ -84,6 +84,14 @@ width: 80%;
     width: 30%;
     margin-right: 5%;
     margin-top: 0%;
+}
+
+.operation-block__number
+{
+    width: 30px;
+    height: 20px;
+    padding-top: 4px;
+    border-radius: 20px;
 }
 
 .restaurants
@@ -134,7 +142,13 @@ width: 80%;
 
 .footer__logo
 {
-    width: 20%;
+    width: 30%;
+}
+
+.footer__links
+{
+    display: flex;
+    flex-direction: column;
 }
 
 .footer__link .footer__icon--fork
