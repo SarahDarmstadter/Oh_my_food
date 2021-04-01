@@ -269,6 +269,7 @@ body {
 }
 
 .block_restaurant__text {
+  cursor: pointer;
   padding-left: 10px;
 }
 .block_restaurant__text--bold {
@@ -364,7 +365,7 @@ footer {
   transition: all 1s;
 }
 
-.footer__contact:active {
+.footer__contact:active #formulaire_contact {
   height: 100%;
 }
 
@@ -513,7 +514,7 @@ textarea::placeholder {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    width: 90%;
+    width: 80%;
     justify-content: center;
   }
 
@@ -524,12 +525,24 @@ textarea::placeholder {
     height: 230px;
   }
 
+  .block_restaurant img {
+    height: 190px;
+  }
+
+  .block_restaurant__description {
+    background: #F2F2F2;
+    position: relative;
+    bottom: 40px;
+    border-radius: 0px 0px 15px 15px;
+  }
+
   .block_restaurant__text {
     font-family: "Roboto";
     font-size: 1rem;
     font-weight: normal;
     color: black;
     padding-top: 10px;
+    width: 100%;
   }
   .block_restaurant__text--bold {
     font-size: bold;
@@ -546,11 +559,6 @@ textarea::placeholder {
 }
 .footer__logo {
   width: 30%;
-}
-
-.footer__links {
-  display: flex;
-  flex-direction: column;
 }
 
 .footer__link .footer__icon--fork {
@@ -660,10 +668,6 @@ body {
 .block__menu--texte {
   width: 100%;
   padding-top: 3px;
-  overflow: hidden;
-  white-space: nowrap;
-  display: inline-block;
-  text-overflow: ellipsis;
 }
 
 .icon__check {
@@ -679,20 +683,20 @@ body {
   width: 0%;
   overflow: hidden;
   border-radius: 0px 10px 10px 0px;
-  transition: all 1s;
+  transition: all 0.5s;
 }
 
 .block__menu:hover .contents {
-  -webkit-transition: width 1s ease-in;
-  -moz-transition: width 1s ease-in;
-  -o-transition: width 1s ease-in;
-  transition: width 1s ease-in;
+  -webkit-transition: width 0.5s ease-in;
+  -moz-transition: width 0.5s ease-in;
+  -o-transition: width 0.5s ease-in;
+  transition: width 0.5s ease-in;
   width: 10%;
 }
 
 .block__menu:hover .icon__check {
   transform: rotate(360deg);
-  transition: 1s ease-in-out;
+  transition: 0.5s ease-in-out;
 }
 
 .block__menu--1 {

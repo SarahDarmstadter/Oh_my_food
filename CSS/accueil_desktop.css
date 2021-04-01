@@ -87,7 +87,7 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    width: 90%;
+    width: 80%;
     justify-content: center;
   }
 
@@ -98,12 +98,24 @@
     height: 230px;
   }
 
+  .block_restaurant img {
+    height: 190px;
+  }
+
+  .block_restaurant__description {
+    background: #F2F2F2;
+    position: relative;
+    bottom: 40px;
+    border-radius: 0px 0px 15px 15px;
+  }
+
   .block_restaurant__text {
     font-family: "Roboto";
     font-size: 1rem;
     font-weight: normal;
     color: black;
     padding-top: 10px;
+    width: 100%;
   }
   .block_restaurant__text--bold {
     font-size: bold;
@@ -120,11 +132,6 @@
 }
 .footer__logo {
   width: 30%;
-}
-
-.footer__links {
-  display: flex;
-  flex-direction: column;
 }
 
 .footer__link .footer__icon--fork {

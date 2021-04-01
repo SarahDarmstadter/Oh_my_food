@@ -198,8 +198,8 @@ body
     @include heading-style(0.8rem,bold,black);
     &--pink
     {
-        background-color: rgba(147, 86, 220, 0.2);
-            }
+    background-color: rgba(147, 86, 220, 0.2);
+    }
 }
 
 .operation__block:hover
@@ -223,7 +223,7 @@ body
 
 .operation-block__text
 {
-           display: flex;
+    display: flex;
     width: 100%;
     align-items: center;
     padding-left: 3%;
@@ -294,8 +294,10 @@ body
 
 .block_restaurant__text
 {
+    cursor:pointer;
     padding-left: 10px;
-    &--bold{
+    &--bold
+    {
         font-weight: bold;
     }
 }
@@ -304,6 +306,7 @@ body
 {
     display: flex;
     justify-content: space-between;
+    
 }
 
 .icon__heart
@@ -324,7 +327,6 @@ body
     -webkit-text-fill-color: transparent;
     transition: all 0s;
     content:"";  
-    
 }
 
 .icon__favoris:hover
@@ -408,7 +410,7 @@ footer
    transition: all 1s;
 }
 
-.footer__contact:active 
+.footer__contact:active #formulaire_contact 
 {
     height: 100%;
 }
@@ -478,8 +480,7 @@ textarea::placeholder
     font-family: roboto;
     font-style: italic;
     position:relative;
-    top: 15px;    
-    
+    top: 15px;     
 }
 
 
