@@ -36,7 +36,6 @@
   }
 
   .__button {
-    width: 30%;
     font-family: "Roboto";
     font-size: 1rem;
     font-weight: bold;
@@ -92,7 +91,7 @@
   }
 
   .block_restaurant {
-    width: 30%;
+    width: 250px;
     margin-right: 5%;
     margin-bottom: 5%;
     height: 230px;
@@ -129,13 +128,18 @@
     padding-bottom: 20px;
     padding-top: 4%;
   }
-}
-.footer__logo {
-  width: 30%;
-}
 
-.footer__link .footer__icon--fork {
-  padding-right: 2.8%;
+  .footer__logo {
+    width: 30%;
+  }
+
+  .footer__link .footer__icon--fork {
+    padding-right: 2.8%;
+  }
+
+  .footer__link {
+    width: 200px;
+  }
 }
 
 /*# sourceMappingURL=accueil_desktop.css.map */

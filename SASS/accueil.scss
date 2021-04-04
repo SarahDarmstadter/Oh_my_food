@@ -27,7 +27,7 @@ body
     margin: 0px;
 }
 
-.overlay
+/*.overlay
 {
   display:flex;
   position: fixed;
@@ -73,7 +73,7 @@ body
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
-
+*/
 
 
 .header
@@ -262,7 +262,6 @@ body
     box-shadow:  0px 4px 9px -2px #c1bdbd;
     line-height: 0.5rem;
     @include heading-style(0.8rem,normal,black);
-    text-decoration:none;
     margin-bottom: 5%;
 }
 
@@ -276,6 +275,7 @@ body
 .block_restaurant__heading
 {
     position: relative;
+    display: block;
 &--new
 {
     background-color: $color-tertiary;
@@ -296,6 +296,8 @@ body
 {
     cursor:pointer;
     padding-left: 10px;
+    text-decoration:none;
+    color:black;
     &--bold
     {
         font-weight: bold;
@@ -305,58 +307,72 @@ body
 .block_restaurant__description
 {
     display: flex;
-    justify-content: space-between;
-    
+    justify-content: space-between; 
+}
+
+.icon__favoris
+{
+    padding-right: 10px;
+    width: 10%;
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    cursor:pointer;
 }
 
 .icon__heart
 {
   position: absolute;
   z-index:1;
+  pointer-events: none;
 }
 
 .icon__heart--filled
 {
-  position:absolute;
-  z-index: 2;
-  opacity: 0;
-  color: $color-secondary;
-  background: -webkit-linear-gradient($color-secondary, $color-primary);
-  background-clip: text;
+    position:absolute;
+    z-index: 2;
+    opacity: 0;
+    color: $color-secondary;
+    background: -webkit-linear-gradient($color-secondary, $color-primary);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     transition: all 0s;
-    content:"";  
+    content:"";
+    pointer-events: none; 
 }
 
 .icon__favoris:hover
 {
-
     .icon__heart--filled
-
     {
         opacity: 1;
         transition: all 1s;
     }
-
     .icon__heart
     {
         opacity:0;
         transition: all 0.5s;
     }
-
 }
 
-.icon__favoris
+.icon__favoris--checkbox
 {
-    width: 10%;
-    display: flex;
-    align-items: center;
-    font-size: 1rem;
+    opacity:0;
+    cursor:pointer;
+        &:checked{
+            & + .icon__heart{
+                opacity:0
+            }
+            & + .icon__heart--filled
+                {
+                    opacity:1;
+                }
 }
+}
+
   
 /*MISE EN PAGE DU FOOTER*/
-
 
 footer
 {
@@ -385,10 +401,17 @@ footer
     {
     font-size: 0.6rem;
     padding-right: 2%;
-    &--fork{
+        &--fork
+        {
         padding-right: 4.7%;
+        }
     }
-    }
+}
+
+.footer__links
+{
+    display:flex;
+    flex-direction: column;
 }
 
 .footer__contact

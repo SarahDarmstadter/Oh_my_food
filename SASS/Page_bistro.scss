@@ -46,6 +46,12 @@ body
         padding-left: 10px;
     }
 
+.icon__heart--filled 
+    {
+        padding-left: 10px;
+
+    }
+
 .carte
 {
     font-family: roboto;
@@ -78,7 +84,6 @@ body
     }
 }
 
-
 .block__menu
 {
     font-family: 'roboto';
@@ -92,32 +97,39 @@ body
     position: relative;
     bottom: 10px;
     display: flex;
-    line-height: 0rem;
     cursor:pointer;  
-    &--nom
-{
-    @include heading-style(0.9rem, bold, black);
-}
-&--description
-{
-    @include heading-style(0.8rem, normal, black);
-    display: flex;
-    justify-content: space-between;
-    position: relative;
-    bottom: 5px;
-}
+        &--nom
+    {
+        @include heading-style(0.9rem, bold, black);
+        margin:3px;
+        overflow:hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+        &--description
+    {
+        @include heading-style(0.8rem, normal, black);
+        display: flex;
+        justify-content: space-between;
+        margin:3px;
+    }
 }
 
 .block__menu--accompagnement 
 {
-    
+    min-width:0px;
+    overflow:hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin:3px;
 }
 
 .block__menu--texte 
 {
-    width: 100%;
     padding-top: 3px;
-    
+    width:100%;
+    width: 100%;
+
 }
 
 .icon__check
@@ -132,7 +144,7 @@ body
   align-items: center;
   background: $color-tertiary;
   display:flex;
-  width:0%;
+  width:0px;
   overflow:hidden;
   border-radius: 0px 10px 10px 0px;
   transition: all 0.5s;
@@ -144,7 +156,16 @@ body
     -moz-transition: width 0.5s ease-in;
     -o-transition: width 0.5s ease-in;
     transition: width 0.5s ease-in;
-    width:10%;
+    width:50px;  
+}
+
+.block__menu:hover .block__menu--texte 
+{
+   width:calc(100% - 50px);
+   -webkit-transition: width 0.5s ease-in;
+    -moz-transition: width 0.5s ease-in;
+    -o-transition: width 0.5s ease-in;
+    transition: width 0.5s ease-in;
 }
 
 .block__menu:hover .icon__check
@@ -152,8 +173,6 @@ body
   transform: rotate(360deg);
   transition: 0.5s ease-in-out;
 }
-
-
 
 .block__menu--1
 {

@@ -53,7 +53,6 @@ $color-tertiary: #99E2D0;
 
 .__button
 {
-    width: 30%;
     @include heading-style(1rem,bold,white);
     cursor:pointer;
 }
@@ -116,7 +115,7 @@ width: 80%;
 
 .block_restaurant
 {
-    width: 30%;
+    width: 250px;
     margin-right: 5%;
     margin-bottom: 5%;
     height: 230px;
@@ -153,22 +152,24 @@ width: 80%;
     padding-bottom:20px;
     padding-top: 4%;
 }
-}
+
 
 .footer__logo
 {
-    width: 30%;
+    width: 30%;  
 }
-
-
 
 .footer__link .footer__icon--fork
 {
     padding-right: 2.8%;
 }
 
+.footer__link
+{
+    width: 200px;
+}
 
-
+}
 
 
       
