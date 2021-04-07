@@ -20,6 +20,10 @@
     padding-bottom: 10px;
   }
 
+  .block__restaurants {
+    width: 60%;
+  }
+
   .block__menu {
     width: 300px;
   }
