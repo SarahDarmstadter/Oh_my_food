@@ -85,14 +85,6 @@ width: 80%;
     margin-top: 0%;
 }
 
-.operation-block__number
-{
-    width: 30px;
-    height: 20px;
-    padding-top: 4px;
-    border-radius: 20px;
-}
-
 .restaurants
 {
     padding-bottom: 5%
@@ -118,19 +110,13 @@ width: 80%;
     width: 250px;
     margin-right: 5%;
     margin-bottom: 5%;
-    height: 230px;
-}
-
-.block_restaurant img
-{
-    height: 190px;
+    display:flex;
+    flex-direction:column-reverse;
 }
 
 .block_restaurant__description
 {
     background: #F2F2F2;
-    position: relative;
-    bottom: 40px;
     border-radius: 0px 0px 15px 15px;
 }
 

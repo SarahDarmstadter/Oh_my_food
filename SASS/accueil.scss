@@ -178,7 +178,7 @@ body
 
 .operation__blocks
 {
-    width: 80%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -212,12 +212,14 @@ body
 {
     position: relative;
     right: 10px;
-    background-color: $color-primary;
-    width: 9%;
-    height: 17px;
-    padding-top: 2px;
-    border-radius: 20px;
-    text-align: center;
+    display:flex;
+    height: 25px;
+    width:25px;
+    border: solid blue;
+    justify-content:center;
+    align-items:center;
+    border-radius:34px;
+    background-color:$color-primary;
     @include heading-style(0.7rem, normal,white);
 }
 
@@ -265,16 +267,32 @@ body
     margin-bottom: 5%;
 }
 
-.block_restaurant img
+.block_restaurant--bistro
 {
-    width: 100%;
-    height: 140px;
-    border-radius: 15px 15px 0px 0px;
+    background:url('images/restaurants/Restaurant_bistro.jpg') no-repeat;
+    background-size: contain;
+}
+
+.block_restaurant--dragon
+{
+    background:url('images/restaurants/Restaurant_asiat.jpg') no-repeat;
+    background-size: contain;
+}
+
+.block_restaurant--vege
+{
+    background:url('images/restaurants/Restaurant_vege.jpg') no-repeat;
+    background-size: contain;
+}
+
+.block_restaurant--theatre
+{
+    background:url('images/restaurants/Restaurant_fr.jpg') no-repeat;
+    background-size: contain;
 }
 
 .block_restaurant__heading
 {
-    position: relative;
     display: block;
 &--new
 {
@@ -285,10 +303,6 @@ body
     padding-top: 7px;
     padding-bottom: 7px;
     color: darken($color-tertiary, 40%);
-    align-self: flex-end;
-    position: absolute;
-    left: 65%;
-    top: 10%;
 }
 }
 

@@ -155,7 +155,7 @@ body {
 }
 
 .operation__blocks {
-  width: 80%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -188,12 +188,14 @@ body {
 .operation-block__number {
   position: relative;
   right: 10px;
+  display: flex;
+  height: 25px;
+  width: 25px;
+  border: solid blue;
+  justify-content: center;
+  align-items: center;
+  border-radius: 34px;
   background-color: #9356DC;
-  width: 9%;
-  height: 17px;
-  padding-top: 2px;
-  border-radius: 20px;
-  text-align: center;
   font-family: "Roboto";
   font-size: 0.7rem;
   font-weight: normal;
@@ -241,14 +243,27 @@ body {
   margin-bottom: 5%;
 }
 
-.block_restaurant img {
-  width: 100%;
-  height: 140px;
-  border-radius: 15px 15px 0px 0px;
+.block_restaurant--bistro {
+  background: url("images/restaurants/Restaurant_bistro.jpg") no-repeat;
+  background-size: contain;
+}
+
+.block_restaurant--dragon {
+  background: url("images/restaurants/Restaurant_asiat.jpg") no-repeat;
+  background-size: contain;
+}
+
+.block_restaurant--vege {
+  background: url("images/restaurants/Restaurant_vege.jpg") no-repeat;
+  background-size: contain;
+}
+
+.block_restaurant--theatre {
+  background: url("images/restaurants/Restaurant_fr.jpg") no-repeat;
+  background-size: contain;
 }
 
 .block_restaurant__heading {
-  position: relative;
   display: block;
 }
 .block_restaurant__heading--new {
@@ -262,10 +277,6 @@ body {
   padding-top: 7px;
   padding-bottom: 7px;
   color: #278870;
-  align-self: flex-end;
-  position: absolute;
-  left: 65%;
-  top: 10%;
 }
 
 .block_restaurant__text {
@@ -515,13 +526,6 @@ textarea::placeholder {
     margin-top: 0%;
   }
 
-  .operation-block__number {
-    width: 30px;
-    height: 20px;
-    padding-top: 4px;
-    border-radius: 20px;
-  }
-
   .restaurants {
     padding-bottom: 5%;
   }
@@ -543,17 +547,12 @@ textarea::placeholder {
     width: 250px;
     margin-right: 5%;
     margin-bottom: 5%;
-    height: 230px;
-  }
-
-  .block_restaurant img {
-    height: 190px;
+    display: flex;
+    flex-direction: column-reverse;
   }
 
   .block_restaurant__description {
     background: #F2F2F2;
-    position: relative;
-    bottom: 40px;
     border-radius: 0px 0px 15px 15px;
   }
 
@@ -610,6 +609,7 @@ body {
   position: relative;
   top: 30px;
   z-index: -1;
+  height: 100px;
 }
 
 .menu {
