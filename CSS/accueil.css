@@ -339,17 +339,6 @@ body {
   transition: all 0.5s;
 }
 
-.icon__favoris--checkbox {
-  opacity: 0;
-  cursor: pointer;
-}
-.icon__favoris--checkbox:checked + .icon__heart {
-  opacity: 0;
-}
-.icon__favoris--checkbox:checked + .icon__heart--filled {
-  opacity: 1;
-}
-
 /*MISE EN PAGE DU FOOTER*/
 footer {
   display: flex;

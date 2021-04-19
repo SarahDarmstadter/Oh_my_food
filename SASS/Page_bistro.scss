@@ -197,6 +197,7 @@ body
 {
   transform: rotate(360deg);
   transition: 0.5s ease-in-out;
+  -webkit-transform: rotate(360deg);
 }
 
 .block__menu--1

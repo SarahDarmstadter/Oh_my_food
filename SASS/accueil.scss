@@ -376,22 +376,6 @@ body
         transition: all 0.5s;
     }
 }
-
-.icon__favoris--checkbox
-{
-    opacity:0;
-    cursor:pointer;
-        &:checked{
-            & + .icon__heart{
-                opacity:0
-            }
-            & + .icon__heart--filled
-                {
-                    opacity:1;
-                }
-}
-}
-
   
 /*MISE EN PAGE DU FOOTER*/
 
