@@ -31,6 +31,11 @@
     width: 60%;
 }
 
+.restaurant__photo
+{
+    height:400px;
+}
+
 .block__menu
 {
     width: 300px;
@@ -50,5 +55,20 @@
 {
     padding-right: 1.9%;
 }
+
+}
+
+@media screen and (min-width:1024px)
+{
+
+    .restaurant__photo
+    {
+        background-position-y: 50%;
+    }
+
+
+
+
+
 
 }

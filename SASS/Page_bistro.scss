@@ -24,8 +24,31 @@ body
     position: relative;
     top: 30px;
     z-index: -1;
-    height: 100px;
+    height: 200px;
+    &--bistro
+    {
+        background:url('images/restaurants/Restaurant_bistro.jpg');
+        background-size:cover;
+    }
+    &--dragon
+    {
+        background:url('images/restaurants/Restaurant_asiat.jpg');
+        background-size:cover;
+    }
+    &--vege
+    {
+        background:url('images/restaurants/Restaurant_vege.jpg');
+        background-size:cover;
+    }
+    &--theatre
+    {
+        background:url('images/restaurants/Restaurant_fr.jpg');
+        background-size:cover;
+        background-position-y: 70%;
+    }
 }
+
+
 
 .menu
 {
