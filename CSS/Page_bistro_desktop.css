@@ -10,7 +10,14 @@
 
   .heading {
     font-size: 1rem;
-    padding-left: 70px;
+    width: 300px;
+    justify-content: space-between;
+    align-self: center;
+  }
+
+  .menu {
+    display: flex;
+    flex-direction: column;
   }
 
   .carte__heading {
