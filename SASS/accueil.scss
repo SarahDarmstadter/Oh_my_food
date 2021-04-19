@@ -27,7 +27,7 @@ body
     margin: 0px;
 }
 
-/*.overlay
+.overlay
 {
   display:flex;
   position: fixed;
@@ -73,7 +73,7 @@ body
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
-*/
+
 
 
 .header
@@ -163,7 +163,7 @@ body
 {
     @include heading-style(1rem,bold,black);
     align-self: flex-start;
-    padding-left: 10%;
+    padding-left: 6%;
     padding-top: 7%;
     display: flex;
     justify-content: space-between;
@@ -194,10 +194,10 @@ body
     background-color: #F6F6F6;
     box-shadow:  0px 4px 9px -2px #c1bdbd;
     height: 60px;
-    width: 80%;
+    width: 90%;
     margin-top: 5%;
     border-radius: 20px;
-    @include heading-style(0.8rem,bold,black);
+    @include heading-style(0.9rem,bold,black);
     &--pink
     {
     background-color: rgba(147, 86, 220, 0.2);
@@ -262,7 +262,7 @@ body
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 80%;
+    width: 90%;
     height: 200px;
     border-radius: 15px;
     box-shadow:  0px 4px 9px -2px #c1bdbd;
