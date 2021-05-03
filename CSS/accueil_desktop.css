@@ -104,7 +104,7 @@
     width: 100%;
   }
   .block_restaurant__text--bold {
-    font-size: bold;
+    font-weight: bold;
   }
 
   .heading {
