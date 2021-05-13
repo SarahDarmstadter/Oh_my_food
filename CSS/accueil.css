@@ -138,7 +138,7 @@ body {
 
 .__button:hover
 {
-  background: lighten(#FF79DA, 30%);
+  background: lighten(#FF79DA, 90%);
   box-shadow: 0px 3px 4px #b0a9a9;
 }
   
