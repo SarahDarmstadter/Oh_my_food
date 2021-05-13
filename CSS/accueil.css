@@ -184,7 +184,7 @@ body {
   font-size: 0.9rem;
   font-weight: bold;
   color: black;
-  cursor: pointers;
+  cursor: pointer;
 }
 .operation__block--pink {
   background-color: rgba(147, 86, 220, 0.2);
