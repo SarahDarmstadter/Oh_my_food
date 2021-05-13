@@ -138,7 +138,7 @@ body {
 
 .__button:hover
 {
-  background: lighten(#FF79DA, 90%);
+ background: linear-gradient(to bottom right, #fcb8ea, #b493db);
   box-shadow: 0px 3px 4px #b0a9a9;
 }
   
